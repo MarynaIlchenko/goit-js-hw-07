@@ -26,9 +26,9 @@ function onImagesContainerClick(e) {
     if (!isGalleryItemEl) {
         return;
     }
-    //     const itemEl = e.target;
-    //     const parentColorCard = itemEl.closest('.gallery-item');
-    //     parentColorCard.classList.add('is-active');//??
+        // const itemEl = e.target;
+        // const parentColorCard = itemEl.closest('.gallery-item');
+        // parentColorCard.classList.add('is-active');//??
     //         // console.log(e.target);
     // }
     // console.log(galleryItems);
