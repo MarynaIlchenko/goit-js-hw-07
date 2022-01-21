@@ -2,7 +2,6 @@ import { galleryItems } from './gallery-items.js';
 // Change code below this line
 const imagesContainer = document.querySelector('.gallery');
 const cardsMarkup = createImageCardsMarkup(galleryItems);
-
 imagesContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 imagesContainer.addEventListener('click', onImagesContainerClick);
 
@@ -24,5 +23,8 @@ function onImagesContainerClick(e) {
         return;
     }
 
-
+let lightbox = new SimpleLightbox('.gallery__item', {captionsData: 'alt', captionDelay: 250, });
+    lightbox.on('show.simplelightbox', function () { });
+    
     console.log(galleryItems);
+}
