@@ -22,9 +22,7 @@ function onImagesContainerClick(e) {
     if (!isGalleryItemEl) {
         return;
     }
-
+}
 let lightbox = new SimpleLightbox('.gallery__item', {captionsData: 'alt', captionDelay: 250, });
-    lightbox.on('show.simplelightbox', function () { });
     
     console.log(galleryItems);
-}
