@@ -27,13 +27,19 @@ function onImagesContainerClick(e) {
     }
 
     const instance = basicLightbox.create(`
-    <img src="${imageSrc}" width="800" height="600">
-    `, {closable: true})
+    <img src="${imageSrc}" width="800" height="600">`, {
+        onShow: () => {
+            window.addEventListener("keydown", closeByEscButton)
+        },
+        onClose: () => {
+            window.removeEventListener("keydown", closeByEscButton)
+        },
+    });
+   
+function closeByEscButton(e) {
+        if (e.code === 'Escape') {
+            instance.close();
+        };
+    };
     instance.show();
-
-     document.addEventListener('keydown', event => {
-if (event.code === 'Escape') {
-    instance.close();
-}
-});
 }
